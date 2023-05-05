@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        img {
+            height: 150px;
+            margin-bottom: 5%;
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            float: right;
+        }
+
+        #left {
+            width: 75%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="right">
+            <img src="img/robot.png" alt="">
+        </div>
+
+        <div id="left">
+            <h1> User Registration</h1>
+            <p id="status">Visible</p>
+
+            <form action="">
+                <input onmouseout="hoverOut()" onclick="hover('Enter complete name.')" type="text" name="name"
+                    placeholder="Name" / required> <br>
+                <input onmouseout="hoverOut()" onclick="hover('Enter valid email address')" type="email" name="email"
+                    placeholder="Email Address" required /> <br>
+                <input onmouseout="hoverOut()" onclick="hover('Enter password')" type="password" name="password"
+                    placeholder="Password" / required>
+                <br>
+
+        </div>
+        <hr>
+        <button type="submit" class="btn"> Sign Up </button>
+        <button type="reset" class="btn">Clear</button>
+        <a href="index.php" class="btn" style="padding-left: 5%; padding-right: 5%;">Login</a>
+
+        </form>
+    </div>
+
+    <script>
+        $status = document.getElementById('status');
+
+        function hover(label) {
+            $status.innerHTML = label;
+            $status.style.visibility = "visible";
+        }
+
+        function hoverOut() {
+            $status.style.visibility = "hidden";
+        }
+    </script>
+</body>
+
+</html>
